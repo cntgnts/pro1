@@ -1,0 +1,10 @@
+FROM tomcat:latest
+#RUN mkdir -p /app
+#WORKDIR /app
+RUN rm -rf webapps/ROOT.war
+ADD ./target/pro1.war webapps/ROOT.war
+EXPOSE 8080
+#RUN mv /app/pro1.war /usr/local/tomcat/webapps/
+
+
+
